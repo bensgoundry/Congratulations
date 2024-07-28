@@ -3,9 +3,3 @@ docker build --no-cache --build-arg USER=user --build-arg PASSWORD=password -t l
 
 Command for running locally:
 docker run -p 5000:5000 login-app
-
-
-Command for cloud deployment:
-gcloud run deploy --image gcr.io/YOUR_PROJECT_ID/login-app --set-env-vars USER=your_username,PASSWORD=your_password
-
-
