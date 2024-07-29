@@ -1,7 +1,11 @@
 from flask import Flask, send_from_directory, jsonify, request
 from flask_cors import CORS
 import os
-from config import CREDENTIALS
+
+CREDENTIALS = {
+    'user': os.environ.get('DB_USERNAME'),
+    'password': os.environ.get('DB_PASSWORD')
+}
 
 app = Flask(__name__, static_folder='static')
 CORS(app)
